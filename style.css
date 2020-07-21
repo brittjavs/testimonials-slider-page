@@ -19,7 +19,7 @@ body{
     padding: 30px;
     background: url("images/pattern-curve.svg");
     background-repeat: no-repeat;
-    background-position: bottom left;
+    background-position: bottom center;
     background-size: contain;
 } 
 
@@ -143,4 +143,30 @@ strong{
 
 .slide-2{
     display: none;
+}
+
+@media only screen and (min-width: 768px){
+    .slide{
+        flex-direction: row;
+        text-align: left;
+    }
+    .slide-quote{
+        background-position: 10% top;
+        background-size: 100px;
+        align-items: flex-start;
+    }
+    .slide-image{
+        margin-left: -100px;
+        z-index: -1;
+    }
+
+    .slide-image img{
+        width: 400px;
+    }
+
+    .buttons{
+        top: 415px;
+        transform: translate(0);
+        left: calc(100% - 400px);
+    }
 }
